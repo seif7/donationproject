@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+.preload {
+    background-image: url("splash.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.loading {
+    text-align: center;
+    margin-top: 3%;
+    text-shadow: -1px 2px 2px #000;
+    color: #bdbdbd;
+}
+
+.loader-frame {
+    position: fixed;
+    margin-left: 48%;
+}
+
+.loader1,
+.loader,
+.loader3 {
+    position: absolute;
+    border: 5px solid transparent;
+    border-radius: 100%;
+}
+
+.loader1 {
+    width: 60px;
+    height: 60px;
+    border-top: 5px solid #bdbdbd;
+    border-bottom: 5px solid #bdbdbd;
+    animation: clockwisespin 2s linear 15;
+    border-radius: 100%;
+}
+
+.loader3 {
+    width: 50px;
+    height: 50px;
+    border-left: 5px solid darkturquoise;
+    border-right: 5px solid darkturquoise;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    animation: anticlockwisespin 2s linear 15;
+}
+
+@keyframes clockwisespin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes anticlockwisespin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
